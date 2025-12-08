@@ -3,20 +3,15 @@
 public class WoodElf : Elf
 {
     public override string Name => "Wood Elf";
-
+    public override string Description => "A wood elf is a graceful and agile being, deeply attuned to the natural world. They are known for their keen senses, swift movements, and strong connection to the forests they call home.";
     public WoodElf()
     {
-        AbilityScoreModifiers[Ability.Wisdom] = 1;
-
-
-        Proficiencies.Add(SkillType.Survival);
-        Proficiencies.Add(SkillType.Stealth);
-        Proficiencies.Add(SkillType.AnimalHandling);
-
+        AbilityScoreModifiers[Ability.Dexterity] += 2;
+        AbilityScoreModifiers[Ability.Wisdom] += 1;
         Traits.Add(new RacialTrait
         {
-            Name = "Cantrip",
-            Description = "You know one cantrip of your choice from the wizard spell list."
+            Name = "Mask of the Wild",
+            Description = "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
         });
-    }
+	}
 }

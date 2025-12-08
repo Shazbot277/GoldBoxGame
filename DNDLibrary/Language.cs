@@ -10,7 +10,7 @@ public enum Language
 	Goblin,
 	Gnoll,
 	Gnomish,
-	Halfing,
+	Halfling,
 	Orcish,
 	ThievesCant,
 }

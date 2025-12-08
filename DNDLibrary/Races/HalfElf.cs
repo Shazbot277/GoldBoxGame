@@ -6,7 +6,7 @@ public class HalfElf : RaceBase
     public override string Description => "Half human, half Elf";
 
     //Plus 1 to two other abilities
-    public HalfElf(string abilityModifier1, string abilityModifier2)
+    public HalfElf()
     {
         AbilityScoreModifiers[Ability.Charisma] = 2;
 
