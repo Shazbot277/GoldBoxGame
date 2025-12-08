@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DNDLibrary.Class;
 using DNDLibrary.Races;
+using DNDLibrary.Equipment;
 
 namespace DNDLibrary;
 
@@ -62,9 +63,11 @@ public class Character
 
 	public int Level { get; private set; }
 
+
+	List<Equipment.Equipment> Inventory { get; set; } = new();
+
 	public Character()
 	{
-
 	}
 
 	public void SetClass(ICharacterClass characterClass, int level = 1)
@@ -110,5 +113,12 @@ public class Character
 
 
 		tarl.SetClass(new Fighter(), 1);
+		tarl.Inventory.Add(Equipment.EquipmentList.Get("Sword"));
+		tarl.Inventory.Add(Equipment.EquipmentList.Get("Shield"));
+		tarl.Inventory.Add(Equipment.EquipmentList.Get("Club"));
+
+
+		//tarl.SetRace(new Dragonborn(DraconicAncestry.DragonType.Blue));
+
 	}
 }

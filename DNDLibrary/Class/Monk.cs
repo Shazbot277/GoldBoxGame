@@ -9,6 +9,20 @@ public class Monk : BaseClass
 		"Simple Weapons",
 		"Shortswords",
 	};
+
+	public override int StartingGold => 11;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Spear"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Explorer's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

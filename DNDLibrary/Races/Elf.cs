@@ -13,9 +13,15 @@ public class Elf : RaceBase
     public Elf()
     {
         AbilityScoreModifiers[Ability.Dexterity] = 2;
+
         Languages.Add(Language.Common);
         Languages.Add(Language.Elvish);
-        Traits.Add(new RacialTrait
+
+		Proficiencies.Add(SkillType.Insight);
+		Proficiencies.Add(SkillType.Perception);
+		Proficiencies.Add(SkillType.Survival);
+
+		Traits.Add(new RacialTrait
         {
             Name = "DarkVision",
             Description = "You can see in dim light within 60 feet..."

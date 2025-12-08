@@ -7,8 +7,10 @@ public class Gnome : RaceBase
 	public Gnome()
 	{
 		AbilityScoreModifiers[Ability.Intelligence] = 2;
+
 		Languages.Add(Language.Common);
 		Languages.Add(Language.Gnomish);
+
 		Traits.Add(new RacialTrait
 		{
 			Name = "DarkVision",

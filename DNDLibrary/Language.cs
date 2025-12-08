@@ -11,6 +11,7 @@ public enum Language
 	Gnoll,
 	Gnomish,
 	Halfling,
+	Infernal,
 	Orcish,
 	ThievesCant,
 }

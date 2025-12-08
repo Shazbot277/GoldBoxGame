@@ -12,6 +12,24 @@ public class Paladin : BaseClass
 		"Medium Armor",
 		"Shields"
 	};
+
+	public override int StartingGold => 9;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Chain Mail"),
+		Equipment.EquipmentList.Get("Shield"),
+		Equipment.EquipmentList.Get("Longsword"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Javelin"),
+		Equipment.EquipmentList.Get("Holy Symbol"),
+		Equipment.EquipmentList.Get("Priest's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

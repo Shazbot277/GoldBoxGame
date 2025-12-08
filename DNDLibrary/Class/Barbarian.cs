@@ -12,6 +12,19 @@ public class Barbarian : BaseClass
 		"Simple Weapons",
 		"Martial Weapons",
 	};
+
+	public override int StartingGold => 15;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Great Axe"),
+		Equipment.EquipmentList.Get("Handaxe"),
+		Equipment.EquipmentList.Get("Handaxe"),
+		Equipment.EquipmentList.Get("Handaxe"),
+		Equipment.EquipmentList.Get("Explorer's Pack"),
+		Equipment.EquipmentList.Get("Light Crossbow"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

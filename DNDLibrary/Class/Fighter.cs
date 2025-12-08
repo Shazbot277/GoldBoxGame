@@ -11,6 +11,20 @@ public class Fighter : BaseClass
 		"Simple Weapons",
 		"Martial Weapons",
 	};
+
+
+	public override int StartingGold => 0; // Fighters do not start with gold if using standard starting equipment
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Chain Mail"),
+		Equipment.EquipmentList.Get("Longsword"),
+		Equipment.EquipmentList.Get("Shield"),
+		Equipment.EquipmentList.Get("Light Crossbow"),
+		Equipment.EquipmentList.Get("20 Bolts"),
+		Equipment.EquipmentList.Get("Explorer's Pack")
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

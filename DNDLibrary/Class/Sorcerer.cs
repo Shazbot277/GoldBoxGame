@@ -12,6 +12,18 @@ public class Sorcerer : BaseClass
 		"Quarterstaffs",
 		"Light Crossbows",
 	};
+
+	public override int StartingGold => 28;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Spear"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Arcane Focus"),
+		Equipment.EquipmentList.Get("Dungeoneer's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

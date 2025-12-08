@@ -12,6 +12,21 @@ public class Ranger : BaseClass
 		"Medium Armor",
 		"Shields",
 	};
+
+	public override int StartingGold => 7;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Studded Leather Armor"),
+		Equipment.EquipmentList.Get("Scimitar"),
+		Equipment.EquipmentList.Get("Shortsword"),
+		Equipment.EquipmentList.Get("Longbow"),
+		Equipment.EquipmentList.Get("Quiver"),
+		Equipment.EquipmentList.Get("Druid Focus"),
+		Equipment.EquipmentList.Get("Explorer's Pack"),
+	};
+
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

@@ -12,6 +12,19 @@ public class Wizard : BaseClass
 		"Quarterstaffs",
 		"Light Crossbows",
 	};
+
+	public override int StartingGold => 5;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Arcane Focus"),
+		Equipment.EquipmentList.Get("Robe"),
+		Equipment.EquipmentList.Get("Spellbook"),
+		Equipment.EquipmentList.Get("Scholar's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

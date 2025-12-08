@@ -8,6 +8,18 @@ public class Warlock : BaseClass
 	{
 		"Simple Weapons",
 	};
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Leather Armor"),
+		Equipment.EquipmentList.Get("Sickle"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Scholar's Pack"),
+	};
+
+	public override int StartingGold => 15;
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

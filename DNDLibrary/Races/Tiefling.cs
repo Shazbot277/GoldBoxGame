@@ -9,8 +9,10 @@ public class Tiefling : RaceBase
 		{
 		AbilityScoreModifiers[Ability.Charisma] = 2;
 		AbilityScoreModifiers[Ability.Intelligence] = 1;
+
 		Languages.Add(Language.Common);
 		Languages.Add(Language.Infernal);
+
 		Traits.Add(new RacialTrait
 		{
 			Name = "Darkvision",

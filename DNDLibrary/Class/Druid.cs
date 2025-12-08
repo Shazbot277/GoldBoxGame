@@ -19,6 +19,19 @@ public class Druid : BaseClass
 		"Slings",
 		"Spears",
 	};
+
+	public override int StartingGold => 9;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Leather Armor"),
+		Equipment.EquipmentList.Get("Shield"),
+		Equipment.EquipmentList.Get("Sickle"),
+		Equipment.EquipmentList.Get("Druidic Focus (Quarter Staff("),
+		Equipment.EquipmentList.Get("Explorer's Pack"),
+		Equipment.EquipmentList.Get("Herbalism Kit"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

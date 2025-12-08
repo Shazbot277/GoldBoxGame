@@ -35,6 +35,17 @@ public class Bard : BaseClass
 			}
 		}
 	};
+
+	public override int StartingGold => 19;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Leather Armor"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Entertainer’s Pack"),
+	};
+
 	public override List<Ability> PrimaryAbilities => new()
 	{
 		Ability.Charisma

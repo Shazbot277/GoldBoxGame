@@ -4,12 +4,18 @@ public abstract class BaseClass : ICharacterClass
 {
 	public abstract string Name { get; }
 	public abstract int HitDie { get; }
+
+	public abstract int StartingGold { get; }
+
 	public abstract List<string> Proficiencies { get; }
 	public abstract Dictionary<int, ClassLevelFeatures> LevelFeatures { get; }
 
 	public abstract List<Ability> PrimaryAbilities { get; }
 
 	public abstract List<Ability> SavingThrowProficiencies { get; }
+
+
+	public abstract List<Equipment.Equipment> StartingEquipment { get; }
 
 	public ClassLevelFeatures GetFeaturesForLevel(int level)
 	{

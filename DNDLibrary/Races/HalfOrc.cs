@@ -6,11 +6,14 @@ public class HalfOrc : RaceBase
 	public override string Description =>
 		"Half-orcs are strong and resilient, often inheriting the best traits of both their human and orcish heritage.";
 	public HalfOrc()
-		{
+	{
+
 		AbilityScoreModifiers[Ability.Strength] = 2;
 		AbilityScoreModifiers[Ability.Constitution] = 1;
+
 		Languages.Add(Language.Common);
 		Languages.Add(Language.Orcish);
+
 		Traits.Add(new RacialTrait
 		{
 			Name = "Darkvision",

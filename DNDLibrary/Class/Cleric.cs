@@ -11,6 +11,18 @@ public class Cleric : BaseClass
 		"Shields",
 		"Simple Weapons",
 	};
+
+	public override int StartingGold => 7;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Chain Shirt"),
+		Equipment.EquipmentList.Get("Shield"),
+		Equipment.EquipmentList.Get("Mace"),
+		Equipment.EquipmentList.Get("Holy Symbol"),
+		Equipment.EquipmentList.Get("Priet's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures

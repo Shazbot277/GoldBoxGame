@@ -12,6 +12,20 @@ public class Rogue : BaseClass
 		"Rapiers",
 		"Shortswords",
 	};
+
+	public override int StartingGold => 8;
+
+	public override List<Equipment.Equipment> StartingEquipment => new()
+	{
+		Equipment.EquipmentList.Get("Leather Armor"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Dagger"),
+		Equipment.EquipmentList.Get("Longbow"),
+		Equipment.EquipmentList.Get("Quiver"),
+		Equipment.EquipmentList.Get("Theives' Tools"),
+		Equipment.EquipmentList.Get("Burglar's Pack"),
+	};
+
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures
