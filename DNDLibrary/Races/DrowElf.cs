@@ -6,7 +6,6 @@ public class DrowElf : Elf
     public override string Description => "Drow elves, also known as dark elves, are a subrace of elves that dwell in the Underdark. They are known for their dark skin, white hair, and affinity for magic. Drow elves are often portrayed as cunning and treacherous, with a matriarchal society that worships the spider goddess Lolth.";
     public DrowElf()
     {
-        AbilityScoreModifiers[Ability.Charisma] += 1;
         Traits.Add(new RacialTrait
         {
             Name = "Superior Darkvision",
