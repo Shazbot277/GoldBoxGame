@@ -1,0 +1,11 @@
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.AssemblyInfoInputs.cache
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.AssemblyInfo.cs
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.csproj.CoreCompileInputs.cache
+C:\Github\GoldBoxGame\DNDLibrary\bin\Debug\net8.0\DNDLibrary.deps.json
+C:\Github\GoldBoxGame\DNDLibrary\bin\Debug\net8.0\DNDLibrary.dll
+C:\Github\GoldBoxGame\DNDLibrary\bin\Debug\net8.0\DNDLibrary.pdb
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.dll
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\refint\DNDLibrary.dll
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.pdb
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\ref\DNDLibrary.dll
