@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DNDLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b38065ac7a8daa8025cddaa00ed7ad125c953dd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DNDLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DNDLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

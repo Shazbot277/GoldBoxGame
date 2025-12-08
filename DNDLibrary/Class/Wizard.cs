@@ -10,9 +10,8 @@ public class Wizard : BaseClass
 		"Darts",
 		"Slings",
 		"Quarterstaffs",
-		"Light Crossbows"
+		"Light Crossbows",
 	};
-
 	public override Dictionary<int, ClassLevelFeatures> LevelFeatures => new()
 	{
 		[1] = new ClassLevelFeatures
@@ -23,16 +22,22 @@ public class Wizard : BaseClass
 				"Spellcasting",
 				"Arcane Recovery"
 			}
+		},
+		[2] = new ClassLevelFeatures
+		{
+			Level = 2,
+			Features = new()
+			{
+				"Arcane Tradition"
+			}
 		}
 	};
-
 	public override List<Ability> PrimaryAbilities => new()
 	{
 		Ability.Intelligence
 	};
-
 	public override List<Ability> SavingThrowProficiencies => new()
-	{ 
+	{
 		Ability.Intelligence,
 		Ability.Wisdom
 	};

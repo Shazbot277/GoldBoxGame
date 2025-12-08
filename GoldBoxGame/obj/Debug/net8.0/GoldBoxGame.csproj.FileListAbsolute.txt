@@ -15,11 +15,6 @@ C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\GoldBoxGame.RazorAssemblyInfo
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\GoldBoxGame.RazorAssemblyInfo.cs
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.build.json
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.development.json
-C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets\msbuild.GoldBoxGame.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets\msbuild.build.GoldBoxGame.props
-C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.GoldBoxGame.props
-C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.GoldBoxGame.props
-C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\scopedcss\bundle\GoldBoxGame.styles.css
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\scopedcss\projectbundle\GoldBoxGame.bundle.scp.css
@@ -28,3 +23,12 @@ C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\refint\GoldBoxGame.dll
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\GoldBoxGame.pdb
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\GoldBoxGame.genruntimeconfig.cache
 C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\ref\GoldBoxGame.dll
+C:\Github\GoldBoxGame\GoldBoxGame\bin\Debug\net8.0\GoldBoxGame.staticwebassets.endpoints.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\GoldBoxGame.sourcelink.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Github\GoldBoxGame\GoldBoxGame\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

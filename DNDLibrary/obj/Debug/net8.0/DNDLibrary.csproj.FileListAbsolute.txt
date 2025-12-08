@@ -9,3 +9,4 @@ C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.dll
 C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\refint\DNDLibrary.dll
 C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.pdb
 C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\ref\DNDLibrary.dll
+C:\Github\GoldBoxGame\DNDLibrary\obj\Debug\net8.0\DNDLibrary.sourcelink.json
