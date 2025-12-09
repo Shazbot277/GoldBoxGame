@@ -29,9 +29,10 @@ namespace GoldBoxGame.Controllers
 			Drizzt.AbilityScores[Ability.Constitution] = Roll.InitialAbilityScore();
 			Drizzt.AbilityScores[Ability.Charisma] = Roll.InitialAbilityScore();
 
-
-
 			Drizzt.SetClass(new Ranger(), 1);
+
+			Drizzt.AddFeat("Alert");
+			Drizzt.AddFeat("Athlete");
 
 			return View();
 		}

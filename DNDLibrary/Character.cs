@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DNDLibrary.Class;
 using DNDLibrary.Races;
 using DNDLibrary.Equipment;
+using DNDLibrary.Feats;
 
 namespace DNDLibrary;
 
@@ -14,6 +15,12 @@ public class Character
 {
 	public string Name { get; set; }
 	public string Background { get; set; }
+
+	public int Gold { get; set; }
+
+	public int InitiativeBonus { get; set; } = 0;
+
+	public List<string> Feats { get; set; } = new();
 
 	public Dictionary<Ability, int> AbilityScores { get; set; } = new()
 	{
@@ -76,6 +83,10 @@ public class Character
 		Level = level;
 	}
 
+
+	#region Feats Region
+
+	
 	public List<string> GetFeatures()
 	{ 
 		var features = new List<string>();
@@ -89,6 +100,39 @@ public class Character
 		return features;
 	}
 
+	public void IncreaseAbility(Ability ability, int amount)
+	{
+		if (AbilityScores.ContainsKey(ability))
+			AbilityScores[ability] += amount;
+		else
+			AbilityScores[ability] = amount;
+	}
+
+	public void AddFeat(string featName)
+	{
+		Feat feat = FeatList.Get(featName);
+		if (feat == null) return;
+
+		if (feat.CanTake(this))
+		{
+			Feats.Add(feat.Name);
+
+			if (feat.GrantsAbilityIncrease && feat.AbilityIncrease.HasValue)
+				IncreaseAbility(feat.AbilityIncrease.Value, feat.IncreaseAmount);
+
+			feat.ApplyEffect(this);
+		}
+		else
+		{
+			Console.WriteLine($"Character does not meet prerequisites for {featName}");
+		}
+	}
+
+	public int GetAbilityScore(Ability ability)
+	{
+		return AbilityScores.ContainsKey(ability) ? AbilityScores[ability] : 0;
+	}
+	#endregion
 
 
 
@@ -120,6 +164,8 @@ public class Character
 		tarl.Inventory.Add(Equipment.EquipmentList.Get("Shield"));
 		tarl.Inventory.Add(Equipment.EquipmentList.Get("Club"));
 
+
+		tarl.Gold = tarl.CharacterClass.StartingGold;
 
 		//tarl.SetRace(new Dragonborn(DraconicAncestry.DragonType.Blue));
 
