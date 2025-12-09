@@ -15,10 +15,30 @@ public static class Roll
 		int[] dieArray = new int[] { die1, die2, die3, die4 };
 		Array.Sort(dieArray);
 		return dieArray[1] + dieArray[2] + dieArray[3];
-	}		
+	}
+
+	public static int D4()
+	{
+		return RandomNumberGenerator.GetInt32(1, 4);
+	}
 
 	public static int D6()
 	{
 		return RandomNumberGenerator.GetInt32(1,6);
+	}
+
+	public static int D8()
+	{
+		return RandomNumberGenerator.GetInt32(1, 8);
+	}
+
+	public static int D10()
+	{
+		return RandomNumberGenerator.GetInt32(1, 10);
+	}
+
+	public static int D20()
+	{
+		return RandomNumberGenerator.GetInt32(1, 20);
 	}
 }

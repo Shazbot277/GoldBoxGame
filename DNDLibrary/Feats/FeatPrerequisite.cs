@@ -2,7 +2,7 @@
 
 public class FeatPrerequisite
 {
-	public Ability? RequiredAbility { get; set; }
+	public Ability? RequiredAbility { get; set; } = null;
 	public int MinimumAbilityScore { get; set; } = 0;
 
 	public string? RequiredRace { get; set; } = null;

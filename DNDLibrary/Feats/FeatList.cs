@@ -73,7 +73,7 @@ public static class FeatList
 	#endregion
 
 	#region General Feats
-	
+
 	private static List<Feat> GeneralFeats = new()
 	{
 		new Feat {
@@ -84,6 +84,10 @@ public static class FeatList
 		new Feat {
 			Name = "Athlete",
 			Description = "Increase Str or Dex by 1. Climbing doesn't cost extra movement.",
+			ApplyEffect = (c) => 
+			{ 
+				//add effect here if needed
+			},
 		},
 		new Feat {
 			Name = "Actor",

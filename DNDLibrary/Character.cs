@@ -16,6 +16,8 @@ public class Character
 	public string Name { get; set; }
 	public string Background { get; set; }
 
+	public Alignment Alignment { get; set; }
+
 	public int Gold { get; set; }
 
 	public int InitiativeBonus { get; set; } = 0;
@@ -32,17 +34,36 @@ public class Character
 		{Ability.Charisma, 10}
 	};
 
+	public Dictionary<Ability, int> AbilityModifier { get; set; } = new();
+
 	public int ProficiencyBonus { get; set; } = 2;
 
+	[Obsolete]
 	public HashSet<SkillType> ProficientSkills { get; set; } = new();
 
+	public Dictionary<SkillType, Skill> Skills { get; set; } = SkillDatabase.Skills;
+
 	public List<SkillType> Proficiencies { get; set; } = new();
+
+	public Dictionary<Ability, int> SavingThrows { get; set; } = new();
 
 	public List<Language> Languages { get; set; } = new();
 
 	public List<RacialTrait> Traits { get; set; } = new();
 
 	public IRace Race { get; private set; }
+
+	public ICharacterClass CharacterClass { get; private set; }
+
+	public int Level { get; private set; }
+
+
+	List<Equipment.Equipment> Inventory { get; set; } = new();
+
+
+	public Character()
+	{
+	}
 
 	public void SetRace(IRace race)
 	{
@@ -55,27 +76,25 @@ public class Character
 		int score = AbilityScores[ability];
 		return (score - 10) / 2;
 	}
-
+	
 	public int GetSkillBonus(SkillType skill)
 	{
 		var data = SkillDatabase.Skills[skill];
 		int mod = GetAbilityModifier(data.Ability);
 
-		if (ProficientSkills.Contains(skill))
+		if (Proficiencies.Contains(skill))
 			mod += ProficiencyBonus;
 		return mod;
 	}
 
-	public ICharacterClass CharacterClass { get; private set; }
-
-	public int Level { get; private set; }
-
-
-	List<Equipment.Equipment> Inventory { get; set; } = new();
-
-	public Character()
+	public int GetSavingThrowBonus(Ability ability)
 	{
+		int mod = GetAbilityModifier(ability);
+		if (CharacterClass.SavingThrowProficiencies.Contains(ability))
+			mod += ProficiencyBonus;
+		return mod;
 	}
+
 
 	public void SetClass(ICharacterClass characterClass, int level = 1)
 	{
@@ -86,7 +105,6 @@ public class Character
 
 	#region Feats Region
 
-	
 	public List<string> GetFeatures()
 	{ 
 		var features = new List<string>();
@@ -155,7 +173,8 @@ public class Character
 
 		tarl.Languages.Add(Language.Dwarvish);
 
-		tarl.ProficientSkills.Add(SkillType.Religion);
+		//tarl.ProficientSkills.Add(SkillType.Religion);
+		tarl.Proficiencies.Add(SkillType.Athletics);
 		tarl.Proficiencies.Add(SkillType.Persuasion);
 
 

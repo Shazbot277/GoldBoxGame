@@ -34,6 +34,8 @@ namespace GoldBoxGame.Controllers
 			Drizzt.AddFeat("Alert");
 			Drizzt.AddFeat("Athlete");
 
+			
+
 			return View();
 		}
 

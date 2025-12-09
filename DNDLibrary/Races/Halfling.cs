@@ -8,8 +8,10 @@ public class Halfling : RaceBase
 	public Halfling()
 		{
 		AbilityScoreModifiers[Ability.Dexterity] = 2;
+
 		Languages.Add(Language.Common);
 		Languages.Add(Language.Halfling);
+
 		Traits.Add(new RacialTrait
 		{
 			Name = "Lucky",
