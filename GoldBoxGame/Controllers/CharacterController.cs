@@ -1,5 +1,6 @@
 ﻿using DNDLibrary;
 using DNDLibrary.Class;
+using DNDLibrary.Equipment;
 using DNDLibrary.Races;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,8 +13,17 @@ namespace GoldBoxGame.Controllers
 			Character Drizzt = new Character();
 			Drizzt.Name = "Drizzt Do'Urden";
 			Drizzt.Alignment = Alignment.ChaoticGood;
+
+
+			EquipmentList.GetAllWeapons();
+
 			Drizzt.SetRace(new DrowElf());
 			Drizzt.SetClass(new Ranger(), 1);
+
+
+			Drizzt.Inventory = Drizzt.CharacterClass.StartingEquipment;
+
+
 
 			Drizzt.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
 			Drizzt.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
@@ -55,6 +65,9 @@ namespace GoldBoxGame.Controllers
 					skill.Modifier += 2;
 				}
 			}
+
+
+			Drizzt.ArmorClass = Drizzt.SetArmorClass();
 
 			//Drizzt.Skills.Add(SkillType.Athletics, Drizzt.GetSkillBonus(SkillType.Athletics));
 			//Drizzt.Skills.Add(SkillType.Acrobatics, Drizzt.GetSkillBonus(SkillType.Acrobatics));

@@ -24,6 +24,10 @@ public class Character
 
 	public int Inspiration { get; set; } = 0;
 
+	public int Speed { get; set; } = 30;
+
+	public int ArmorClass { get; set; } = 10;
+
 	public List<string> Feats { get; set; } = new();
 
 	public Dictionary<Ability, int> AbilityScores { get; set; } = new()
@@ -60,7 +64,7 @@ public class Character
 	public int Level { get; private set; }
 
 
-	List<Equipment.Equipment> Inventory { get; set; } = new();
+	public List<Equipment.Equipment> Inventory { get; set; } = new();
 
 
 	public Character()
@@ -155,7 +159,10 @@ public class Character
 	#endregion
 
 
-
+	public int SetArmorClass()
+	{ 
+		return 10 + GetAbilityModifier(Ability.Dexterity);
+	}
 
 	public static void TarlCharacter()
 	{
