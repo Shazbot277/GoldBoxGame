@@ -44,28 +44,17 @@ namespace GoldBoxGame.Controllers
 			Drizzt.SavingThrows.Add(Ability.Charisma, Drizzt.GetSavingThrowBonus(Ability.Charisma));
 
 			
-			int test3 = Drizzt.AbilityModifier[Ability.Dexterity];
-
 			foreach (var item in Drizzt.Skills)
 			{
 				Skill skill = item.Value;
-				var test2 = skill.Ability;
 				int mod = Drizzt.AbilityModifier[skill.Ability];
+				skill.Modifier = mod;
 
-				//if (skill.Ability == Drizzt.AbilityModifier[skill.Ability].key)
-				//{ 
-
-				//}
-
-				skill.Modifier = 3;
-				
-
+				if(Drizzt.Proficiencies.Contains(skill.Type))
+				{
+					skill.Modifier += 2;
+				}
 			}
-
-
-
-
-
 
 			//Drizzt.Skills.Add(SkillType.Athletics, Drizzt.GetSkillBonus(SkillType.Athletics));
 			//Drizzt.Skills.Add(SkillType.Acrobatics, Drizzt.GetSkillBonus(SkillType.Acrobatics));

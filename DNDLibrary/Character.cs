@@ -22,6 +22,8 @@ public class Character
 
 	public int InitiativeBonus { get; set; } = 0;
 
+	public int Inspiration { get; set; } = 0;
+
 	public List<string> Feats { get; set; } = new();
 
 	public Dictionary<Ability, int> AbilityScores { get; set; } = new()
