@@ -24,7 +24,6 @@ public class Ranger : BaseClass
 		Equipment.EquipmentList.Get("Quiver"),
 		Equipment.EquipmentList.Get("Druid Focus"),
 		Equipment.EquipmentList.Get("Explorer's Pack"),
-		Equipment.EquipmentList.Get("Chain Mail")
 	};
 
 

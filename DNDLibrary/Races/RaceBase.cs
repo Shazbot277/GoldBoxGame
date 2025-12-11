@@ -13,7 +13,9 @@ public abstract class RaceBase : IRace
 
     public virtual List<RacialTrait> Traits { get; } = new();
 
-    public virtual void ApplyTo(Character character)
+    public virtual List<Equipment.Weapon> WeaponProficiencies { get; } = new();
+
+	public virtual void ApplyTo(Character character)
     {
         foreach (var mod in AbilityScoreModifiers)
             character.AbilityScores[mod.Key] += mod.Value;

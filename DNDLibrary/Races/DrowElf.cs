@@ -21,5 +21,9 @@ public class DrowElf : Elf
             Name = "Drow Magic",
             Description = "You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once per day. When you reach 5th level, you can also cast the Darkness spell once per day. Charisma is your spellcasting ability for these spells."
         });
+
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Rapiers"));
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Shortswords"));
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Hand Crossbows"));
 	}
 }

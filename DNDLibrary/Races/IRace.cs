@@ -13,5 +13,7 @@ public interface IRace
     List<SkillType> Proficiencies { get; }
     List<RacialTrait> Traits { get; }
 
-    void ApplyTo(Character character);
+	List<Equipment.Weapon> WeaponProficiencies { get; }
+
+	void ApplyTo(Character character);
 }

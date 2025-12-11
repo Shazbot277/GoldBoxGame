@@ -93,7 +93,7 @@
                         <div class="label-container">
                             <label for="proficiencybonus">Proficiency Bonus</label>
                         </div>
-                        <input name="proficiencybonus" placeholder="+2" />
+                        <input name="proficiencybonus" placeholder="+2" value="@Model.ProficiencyBonus" />
                     </div>
                     <div class="saves list-section box">
                         <ul>
@@ -120,7 +120,11 @@
                             Saving Throws
                         </div>
                     </div>
-                    <div class="skills list-section box">
+
+
+                    <partial name="_CharacterSkillSection" model="Model.Skills" />
+
+                    <div class="skills list-section box" style="display:none">
                         <ul>
                             <li>
                                 <label for="Acrobatics">Acrobatics <span class="skill">(Dex)</span></label><input name="Acrobatics" placeholder="+0" type="text" value="@Model.Skills[DNDLibrary.SkillType.Acrobatics].Modifier" /><input name="Acrobatics-prof" type="checkbox" />
@@ -277,6 +281,51 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                            @foreach (var item in Model.Inventory)
+                            {
+                                if (item is null || item.Type != DNDLibrary.Equipment.EquipmentType.Weapon)
+                                        continue;
+
+                                int proficiencyBonus = 0;
+                                if (Model.Race.WeaponProficiencies.Contains(((DNDLibrary.Equipment.Weapon)item)))
+                                {
+                                    proficiencyBonus = Model.ProficiencyBonus;
+                                }
+
+                                int abilityMod = Model.AbilityModifier[DNDLibrary.Ability.Strength];
+
+
+                                if (((DNDLibrary.Equipment.Weapon)item).Properties.Contains(DNDLibrary.Equipment.WeaponProperty.Finesse))
+                                {
+                                    abilityMod = Math.Max(Model.AbilityModifier[DNDLibrary.Ability.Strength], Model.AbilityModifier[DNDLibrary.Ability.Dexterity]);
+                                }
+                                
+
+                                //ROLL A D20 AND ADD ATTACK BONUS SO IF YOU ROLL A 13 + 5 = 18
+                                int hitBonus = abilityMod + proficiencyBonus;
+
+                                
+                                int diceCount = ((DNDLibrary.Equipment.Weapon)item).DiceCount;
+                                int diceSides = ((DNDLibrary.Equipment.Weapon)item).DiceSides;
+                                string damageString = $"{diceCount}D{diceSides}"; 
+
+
+                                
+                                <tr>
+                                    <td>
+                                        <input name="atkname1" type="text" value="@item.Name" />
+                                    </td>
+                                    <td>
+                                        <input name="atkbonus1" type="text" value="+@hitBonus" />
+                                    </td>
+                                    <td>
+                                        <input name="atkdamage1" type="text" value="@damageString" />
+                                    </td>
+                                </tr>
+                            }
+
+
                             <tr>
                                 <td>
                                     <input name="atkname1" type="text" />

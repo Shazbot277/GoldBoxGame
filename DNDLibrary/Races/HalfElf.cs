@@ -24,5 +24,5 @@ public class HalfElf : RaceBase
             Name = "Fey Ancestry",
             Description = "You have advantage on saving throws..."
         });
-    }
+	}
 }

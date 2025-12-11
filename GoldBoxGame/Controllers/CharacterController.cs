@@ -104,5 +104,12 @@ namespace GoldBoxGame.Controllers
 
 			return View(Drizzt);
 		}
+
+
+
+		public IActionResult _CharacterSkillSection(Dictionary<DNDLibrary.SkillType, DNDLibrary.Skill> skills)
+		{
+			return PartialView(skills);
+		}
 	}
 }

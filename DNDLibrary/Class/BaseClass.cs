@@ -13,8 +13,7 @@ public abstract class BaseClass : ICharacterClass
 	public abstract List<Ability> PrimaryAbilities { get; }
 
 	public abstract List<Ability> SavingThrowProficiencies { get; }
-
-
+	
 	public abstract List<Equipment.Equipment> StartingEquipment { get; }
 
 	public ClassLevelFeatures GetFeaturesForLevel(int level)

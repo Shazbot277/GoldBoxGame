@@ -1,0 +1,19 @@
+﻿@model Dictionary<DNDLibrary.SkillType, DNDLibrary.Skill>
+
+
+<div class="skills list-section box">
+    <ul>
+        @foreach (var item in Model)
+        {
+            var key = item.Key;
+            var value = item.Value;
+            string ability = value.Ability.ToString().Substring(0,3).ToUpper();
+
+            <li>
+                <label for="Acrobatics">@key <span class="skill">(@ability)</span></label>
+                <input name="Acrobatics" placeholder="+0" type="text" value="@value.Modifier" /><input name="@key-prof" type="checkbox" />
+            </li>
+
+        }
+    </ul>
+</div>

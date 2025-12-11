@@ -11,9 +11,10 @@ public class Dragonborn : RaceBase
 	[Required]
 	public DraconicAncestry.DragonType DragonType { get; set; } = new();
 
+	public List<Equipment.Weapon> WeaponProficiencies { get; set; } = new();
+
 	public Dragonborn(DraconicAncestry.DragonType color)
 	{
-
 		DragonType = color;
 
 		AbilityScoreModifiers[Ability.Strength] = 2;

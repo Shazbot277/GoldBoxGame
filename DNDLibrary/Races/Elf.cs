@@ -36,5 +36,10 @@ public class Elf : RaceBase
             Name = "Fey Ancestry",
             Description = "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
         });
+
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Longsword"));
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Shortsword"));
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Longbow"));
+		WeaponProficiencies.Add(Equipment.Weapons.Get("Shortbow"));
 	}
 }
