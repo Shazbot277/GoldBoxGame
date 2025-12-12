@@ -1,15 +1,23 @@
-﻿@model Dictionary<DNDLibrary.Ability, int>
-
+﻿@model DNDLibrary.Character
 
 <div class="saves list-section box">
     <ul>
-        @foreach (var item in Model)
+        @foreach (var item in Model.SavingThrows)
         {
             DNDLibrary.Ability ability = item.Key;
             int value = item.Value;
 
+            string proficient = "";
+            if (Model.CharacterClass.PrimaryAbilities.Contains(ability))
+            {
+                proficient = "checked=\"checked\"";
+                value += Model.ProficiencyBonus;
+            }
+
+
             <li>
-                <label for="@ability-save">@ability</label><input name="@ability-save" placeholder="+0" type="text" value="@value" /><input name="@ability-save-prof" type="checkbox" />
+                <label for="@ability-save">@ability</label><input name="@ability-save" placeholder="+0" type="text" value="@value" />
+                <input name="@ability-save-prof" type="checkbox" @proficient />
             </li>
         }
     </ul> 

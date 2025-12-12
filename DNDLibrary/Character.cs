@@ -68,11 +68,7 @@ public class Character
 
 	public ICharacterClass CharacterClass { get; private set; }
 
-	
-
-
 	public List<Equipment.Equipment> Inventory { get; set; } = new();
-
 
 	public Character()
 	{
@@ -108,13 +104,11 @@ public class Character
 		return mod;
 	}
 
-
 	public void SetClass(ICharacterClass characterClass, int level = 1)
 	{
 		CharacterClass = characterClass;
 		Level = level;
 	}
-
 
 	#region Feats Region
 
@@ -165,7 +159,6 @@ public class Character
 	}
 	#endregion
 
-
 	public int SetArmorClass()
 	{
 		if (Inventory.Any(x => x.Type == EquipmentType.Armor))
@@ -186,6 +179,15 @@ public class Character
 			}
 		}
 		return 10 + GetAbilityModifier(Ability.Dexterity);
+	}
+
+	public int SetPassiveWisdom()
+	{
+		if (Proficiencies.Contains(SkillType.Perception))
+		{
+			return 10 + GetAbilityModifier(Ability.Wisdom) + ProficiencyBonus;
+		}
+		return 10 + GetAbilityModifier(Ability.Wisdom);
 	}
 
 	public static void TarlCharacter()

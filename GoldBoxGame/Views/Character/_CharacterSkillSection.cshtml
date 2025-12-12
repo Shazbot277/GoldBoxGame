@@ -10,8 +10,8 @@
             string ability = value.Ability.ToString().Substring(0,3).ToUpper();
 
             <li>
-                <label for="Acrobatics">@key <span class="skill">(@ability)</span></label>
-                <input name="Acrobatics" placeholder="+0" type="text" value="@value.Modifier" /><input name="@key-prof" type="checkbox" />
+                <label for="@key">@key <span class="skill">(@ability)</span></label>
+                <input name="@key" placeholder="+0" type="text" value="@value.Modifier" /><input name="@key-prof" type="checkbox" />
             </li>
 
         }

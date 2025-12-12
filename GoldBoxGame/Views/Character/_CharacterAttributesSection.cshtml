@@ -1,0 +1,54 @@
+﻿@model DNDLibrary.Character
+
+<div class="scores">
+    <ul>
+        <li>
+            <div class="score">
+                <label for="Strengthscore">Strength</label><input name="Strengthscore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Strength]" />
+            </div>
+            <div class="modifier">
+                <input name="Strengthmod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Strength]" />
+            </div>
+        </li>
+        <li>
+            <div class="score">
+                <label for="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Dexterity]" />
+            </div>
+            <div class="modifier">
+                <input name="Dexteritymod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Dexterity]" />
+            </div>
+        </li>
+        <li>
+            <div class="score">
+                <label for="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Constitution]" />
+            </div>
+            <div class="modifier">
+                <input name="Constitutionmod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Constitution]" />
+            </div>
+        </li>
+        <li>
+            <div class="score">
+                <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Wisdom]" />
+            </div>
+            <div class="modifier">
+                <input name="Wisdommod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Wisdom]" />
+            </div>
+        </li>
+        <li>
+            <div class="score">
+                <label for="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Intelligence]" />
+            </div>
+            <div class="modifier">
+                <input name="Intelligencemod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Intelligence]" />
+            </div>
+        </li>
+        <li>
+            <div class="score">
+                <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value="@Model.AbilityScores[DNDLibrary.Ability.Charisma]" />
+            </div>
+            <div class="modifier">
+                <input name="Charismamod" placeholder="+0" value="@Model.AbilityModifier[DNDLibrary.Ability.Charisma]" />
+            </div>
+        </li>
+    </ul>
+</div>

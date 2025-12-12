@@ -71,35 +71,7 @@ namespace GoldBoxGame.Controllers
 
 			Drizzt.ArmorClass = Drizzt.SetArmorClass();
 
-			//Drizzt.Skills.Add(SkillType.Athletics, Drizzt.GetSkillBonus(SkillType.Athletics));
-			//Drizzt.Skills.Add(SkillType.Acrobatics, Drizzt.GetSkillBonus(SkillType.Acrobatics));
-			//Drizzt.Skills.Add(SkillType.SleightOfHand, Drizzt.GetSkillBonus(SkillType.SleightOfHand));
-			//Drizzt.Skills.Add(SkillType.Stealth, Drizzt.GetSkillBonus(SkillType.Stealth));
-
-			//Drizzt.Skills.Add(SkillType.Arcana, Drizzt.GetSkillBonus(SkillType.Arcana));
-			//Drizzt.Skills.Add(SkillType.History, Drizzt.GetSkillBonus(SkillType.History));
-			//Drizzt.Skills.Add(SkillType.Investigation, Drizzt.GetSkillBonus(SkillType.Investigation));
-			//Drizzt.Skills.Add(SkillType.Nature, Drizzt.GetSkillBonus(SkillType.Nature));
-			//Drizzt.Skills.Add(SkillType.Religion, Drizzt.GetSkillBonus(SkillType.Religion));
-
-			//Drizzt.Skills.Add(SkillType.AnimalHandling, Drizzt.GetSkillBonus(SkillType.AnimalHandling));
-			//Drizzt.Skills.Add(SkillType.Insight, Drizzt.GetSkillBonus(SkillType.Insight));
-			//Drizzt.Skills.Add(SkillType.Medicine, Drizzt.GetSkillBonus(SkillType.Medicine));
-			//Drizzt.Skills.Add(SkillType.Perception, Drizzt.GetSkillBonus(SkillType.Perception));
-			//Drizzt.Skills.Add(SkillType.Survival, Drizzt.GetSkillBonus(SkillType.Survival));
-
-			//Drizzt.Skills.Add(SkillType.Deception, Drizzt.GetSkillBonus(SkillType.Deception));
-			//Drizzt.Skills.Add(SkillType.Intimidation, Drizzt.GetSkillBonus(SkillType.Intimidation));
-			//Drizzt.Skills.Add(SkillType.Performance, Drizzt.GetSkillBonus(SkillType.Performance));
-			//Drizzt.Skills.Add(SkillType.Persuasion, Drizzt.GetSkillBonus(SkillType.Persuasion));
-
-
-			//if(Drizzt.Race.AbilityScoreModifiers.Count > 0) {
-			//	foreach (var ability in AbilityScoreModifiers)
-			//	{ 
-
-			//	}
-			//}
+			Drizzt.SetPassiveWisdom();
 
 			Drizzt.AddFeat("Alert");
 			Drizzt.AddFeat("Athlete");
@@ -114,9 +86,14 @@ namespace GoldBoxGame.Controllers
 			return PartialView(skills);
 		}
 
-		public IActionResult _CharacterSavingThrowsSection(Dictionary<Ability, int> savingThrows)
+		public IActionResult _CharacterSavingThrowsSection(Character character)
 		{
-			return PartialView(savingThrows);
+			return PartialView(character);
+		}
+
+		public IActionResult _CharacterAttributesSection(Character character)
+		{
+			return PartialView(character);
 		}
 	}
 }
