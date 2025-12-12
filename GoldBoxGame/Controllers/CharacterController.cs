@@ -20,10 +20,7 @@ namespace GoldBoxGame.Controllers
 			Drizzt.SetRace(new DrowElf());
 			Drizzt.SetClass(new Ranger(), 1);
 
-
 			Drizzt.Inventory = Drizzt.CharacterClass.StartingEquipment;
-
-
 
 			Drizzt.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
 			Drizzt.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
@@ -38,7 +35,12 @@ namespace GoldBoxGame.Controllers
 				//Drizzt.AbilityModifier[mod.Key] = Drizzt.GetAbilityModifier(mod.Key);
 			});
 
-			Drizzt.AbilityModifier.Add(Ability.Strength, Drizzt.GetAbilityModifier(Ability.Strength));
+
+			Drizzt.MaxHitPoints = Drizzt.CurrentHitPoints = Drizzt.CharacterClass.HitDie + Drizzt.AbilityScores[Ability.Constitution];
+			Drizzt.TemporaryHitPoints = 0;
+
+
+            Drizzt.AbilityModifier.Add(Ability.Strength, Drizzt.GetAbilityModifier(Ability.Strength));
 			Drizzt.AbilityModifier.Add(Ability.Dexterity, Drizzt.GetAbilityModifier(Ability.Dexterity));
 			Drizzt.AbilityModifier.Add(Ability.Intelligence, Drizzt.GetAbilityModifier(Ability.Intelligence));
 			Drizzt.AbilityModifier.Add(Ability.Wisdom, Drizzt.GetAbilityModifier(Ability.Wisdom));

@@ -28,7 +28,14 @@ public class Character
 
 	public int ArmorClass { get; set; } = 10;
 
-	public List<string> Feats { get; set; } = new();
+    public int Level { get; private set; }
+
+	public int MaxHitPoints { get; set; } = 0;
+	public int CurrentHitPoints { get; set; } = 0;
+	public int TemporaryHitPoints { get; set; } = 0;
+
+
+    public List<string> Feats { get; set; } = new();
 
 	public Dictionary<Ability, int> AbilityScores { get; set; } = new()
 	{
@@ -61,7 +68,7 @@ public class Character
 
 	public ICharacterClass CharacterClass { get; private set; }
 
-	public int Level { get; private set; }
+	
 
 
 	public List<Equipment.Equipment> Inventory { get; set; } = new();
