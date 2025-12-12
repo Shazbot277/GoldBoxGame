@@ -107,9 +107,14 @@ namespace GoldBoxGame.Controllers
 
 
 
-		public IActionResult _CharacterSkillSection(Dictionary<DNDLibrary.SkillType, DNDLibrary.Skill> skills)
+		public IActionResult _CharacterSkillSection(Dictionary<SkillType, Skill> skills)
 		{
 			return PartialView(skills);
+		}
+
+		public IActionResult _CharacterSavingThrowsSection(Dictionary<Ability, int> savingThrows)
+		{
+			return PartialView(savingThrows);
 		}
 	}
 }

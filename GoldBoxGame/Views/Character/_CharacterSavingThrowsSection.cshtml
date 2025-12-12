@@ -1,0 +1,19 @@
+﻿@model Dictionary<DNDLibrary.Ability, int>
+
+
+<div class="saves list-section box">
+    <ul>
+        @foreach (var item in Model)
+        {
+            DNDLibrary.Ability ability = item.Key;
+            int value = item.Value;
+
+            <li>
+                <label for="@ability-save">@ability</label><input name="@ability-save" placeholder="+0" type="text" value="@value" /><input name="@ability-save-prof" type="checkbox" />
+            </li>
+        }
+    </ul> 
+    <div class="label">
+        Saving Throws
+    </div>
+</div>
