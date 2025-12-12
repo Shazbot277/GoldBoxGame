@@ -167,7 +167,24 @@ public class Character
 
 
 	public int SetArmorClass()
-	{ 
+	{
+		if (Inventory.Any(x => x.Type == EquipmentType.Armor))
+		{
+			var armor = Inventory.First(x => x.Type == EquipmentType.Armor);
+
+			if (armor is Armor a)
+			{
+				int ac = a.BaseAC;
+				if (a.AddDexModifier)
+				{
+					int dexMod = GetAbilityModifier(Ability.Dexterity);
+					if (dexMod > a.MaxDexBonus)
+						dexMod = a.MaxDexBonus;
+					ac += dexMod;
+				}
+				return ac;
+			}
+		}
 		return 10 + GetAbilityModifier(Ability.Dexterity);
 	}
 
