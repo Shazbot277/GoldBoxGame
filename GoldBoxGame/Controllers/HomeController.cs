@@ -18,26 +18,31 @@ namespace GoldBoxGame.Controllers
 
 		public IActionResult Index()
 		{
-			Character Drizzt = new Character();
-			Drizzt.Name = "Drizzt Do'Urden";
-			Drizzt.SetRace(new DrowElf());
-
-			Drizzt.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
-			Drizzt.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
-			Drizzt.AbilityScores[Ability.Intelligence] = Roll.InitialAbilityScore();
-			Drizzt.AbilityScores[Ability.Wisdom] = Roll.InitialAbilityScore();
-			Drizzt.AbilityScores[Ability.Constitution] = Roll.InitialAbilityScore();
-			Drizzt.AbilityScores[Ability.Charisma] = Roll.InitialAbilityScore();
-
-			Drizzt.SetClass(new Ranger(), 1);
-
-			Drizzt.AddFeat("Alert");
-			Drizzt.AddFeat("Athlete");
-
-			
-
-			return View();
+			return RedirectToAction("MyCharacter");
 		}
+
+
+		#region My DND Character
+	
+
+		public IActionResult MyCharacter()
+		{
+			DNDLibrary.Character character = DNDLibrary.CharacterFactory.CreateDrizzt();
+			return View(character);
+		}
+
+		public IActionResult _AbilityCardView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _ProficiencyBonusView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		#endregion
+
 
 		public IActionResult Privacy()
 		{

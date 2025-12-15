@@ -1,0 +1,70 @@
+﻿@model DNDLibrary.Character
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="d-lg-flex border border-dark">
+            <div class="border border-dark p-2">@Model.ProficiencyBonus</div>
+            <div class="p-2">Proficiency Bonus</div>
+        </div>
+        <div class="d-lg-flex border border-dark">
+            <div class="border border-dark p-2">@Model.Inspiration</div>
+            <div class="p-2">Inspiration</div>
+        </div>
+
+        <partial name="_AbilityCardView" model="Model" />
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+<div class="jumbotron jumbotron-fluid border border-dark d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <div class="float-start">
+                        <img src="" alt="" style="background-color:black; height:75px; width:75px" />
+                    </div>
+                    <h2>@Model.Name</h2>
+                    <div>
+                        <small>@Model.Race.Name @Model.CharacterClass.Name Level @Model.Level</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 text-end">
+                <button class="btn-outline-dark">Short Rest</button>
+                <button class="btn-outline-dark">Long Rest</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row d-none">
+    <div class="col-md-6 d-lg-flex">
+        <partial name="_AbilityCardView" model="Model" />
+    </div>
+    <div class="col-md-6 d-lg-flex border border-danger">
+        <partial name="_ProficiencyBonusView" model="Model" />
+
+        <div class="text-center border border-dark my-2 mx-2 px-2;" style="width:100px;">
+            <div class="ability-name text-uppercase"><small>Walking</small></div>
+            <div class="ability-bonus h3 border border-dark p-2 m-2" style="border-radius:15px; background-color:lightgrey; cursor:pointer">30ft</div>
+            <div class="ability-name text-uppercase m-2"><small>Speed</small></div>
+        </div>
+
+        <div class="text-center border border-dark my-2 mx-2 px-2;" style="width:100px;">
+            <div class="ability-name text-uppercase"><small>Heroic</small></div>
+            <div class="ability-bonus h3 border border-dark p-2 m-2" style="border-radius:15px; background-color:lightgrey; cursor:pointer">1</div>
+            <div class="ability-name text-uppercase m-2"><small>Inspiration</small></div>
+        </div>
+    </div>
+</div>
