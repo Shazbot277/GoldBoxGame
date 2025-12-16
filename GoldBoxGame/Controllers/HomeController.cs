@@ -3,6 +3,7 @@ using DNDLibrary.Class;
 using DNDLibrary.Races;
 using GoldBoxGame.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Abstractions;
 using System.Diagnostics;
 
 namespace GoldBoxGame.Controllers
@@ -41,7 +42,93 @@ namespace GoldBoxGame.Controllers
 			return PartialView(character);
 		}
 
+		public IActionResult _SetProficiencyBonusView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetInspirationView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetPassiveWisdomView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetArmorClass(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetInitiativeView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetSpeedView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetHitPointsView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetTemporaryHitPointsView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetHitDice(Character character)
+		{ 
+			return PartialView(character);
+		}
+
+		public IActionResult _SetDeathSavesView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetAlignmentView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetRaceNameView(Character character)
+		{
+			return PartialView(character);
+		}
+
+
+		public IActionResult _SetExpView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetClassNameView(Character character)
+		{
+			return PartialView(character);
+		}
+
+		public IActionResult _SetInventoryView(Character character)
+		{
+			return PartialView(character);
+		}
+
 		#endregion
+
+
+
+
+
+
+
+
+
+
 
 
 		public IActionResult Privacy()

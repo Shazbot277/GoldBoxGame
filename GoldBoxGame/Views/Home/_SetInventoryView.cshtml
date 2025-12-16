@@ -1,0 +1,36 @@
+﻿@model DNDLibrary.Character
+
+
+<div class="border border-dark rounded d-flex flex-column">
+    <div class="py-2 px-2 text-uppercase btn-outline-success">Inventory</div>
+    <div class="py-2 px-5 bg-light border border-dark rounded">
+        @if (Model.Inventory != null && Model.Inventory.Count > 0)
+        {
+            <div class="text-decoration-underline text-uppercase">Armor</div>
+            
+                @foreach (var item in Model.Inventory)
+                {
+                    if (item is not null && item.Type == DNDLibrary.Equipment.EquipmentType.Armor)
+                    {
+                        string name = ((DNDLibrary.Equipment.Armor)item).Name;
+                        <div><label><input type="checkbox" name="name" value="" /> @name</label></div>
+                    }
+                }
+            
+
+            <div class="text-decoration-underline text-uppercase">Weapons</div>
+                @foreach (var item in Model.Inventory)
+                {
+                    if (item is not null && item.Type == DNDLibrary.Equipment.EquipmentType.Weapon)
+                    {
+                        string name = ((DNDLibrary.Equipment.Weapon)item).Name;
+                        <div><label><input type="checkbox" name="name" value="" /> @name</label></div>
+                    }
+                }
+        }
+        else
+        {
+            <span>No items in inventory.</span>
+        }
+    </div>
+</div>

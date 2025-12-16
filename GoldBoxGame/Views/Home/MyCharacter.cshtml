@@ -1,66 +1,11 @@
 ﻿@model DNDLibrary.Character
 
 
-<div class="row">
-    <div class="col-md-4 border border-warning">
-        <div class="d-lg-flex border border-dark">
-            <div class="border border-dark p-2">@Model.ProficiencyBonus</div>
-            <div class="p-2">Proficiency Bonus</div>
-        </div>
-        <div class="d-lg-flex border border-dark">
-            <div class="border border-dark p-2">@Model.Inspiration</div>
-            <div class="p-2">Inspiration</div>
-        </div>
-
-        <partial name="_AbilityCardView" model="Model" />
-
-        <div class="d-lg-flex">
-            <div class="border border-dark py-3 px-4 fw-bold rounded">@Model.SetPassiveWisdom()</div>
-            <div class="border border-dark p-3 w-100">Passive Wisdom</div>
-        </div>
-    </div>
-
-    <div class="col-md-4 border border-danger">
-        <div class=" d-lg-flex">
-            <div class="text-center border border-dark rounded w-25 mx-3">
-                <div class="h3">15</div>
-                <div>Armor Class</div>
-            </div>
-
-            <div class="text-center border border-dark rounded w-25 mx-3">
-                <div class="h3">15</div>
-                <div>Initiative</div>
-            </div>
-
-            <div class="text-center border border-dark rounded w-25 mx-3">
-                <div class="h3">30</div>
-                <div>Speed</div>
-            </div>
-        </div>
-
-        <div class="border border-dark rounded mx-3 p-3 w-75">
-            <div>Hit Points<u style="padding-left:35px">33</u></div>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="jumbotron jumbotron-fluid border border-dark d-none">
+<div class="jumbotron jumbotron-fluid border border-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div>
+                <div class="border border-dark rounded">
                     <div class="float-start">
                         <img src="" alt="" style="background-color:black; height:75px; width:75px" />
                     </div>
@@ -70,13 +15,82 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 text-end">
-                <button class="btn-outline-dark">Short Rest</button>
-                <button class="btn-outline-dark">Long Rest</button>
+            <div class="col-md-8">
+                <div class="d-flex">
+                    <partial name="_SetClassNameView" model="Model" />
+
+                    <partial name="_SetExpView" model="Model" />
+
+                </div>
+                <div class="d-flex">
+
+                    <partial name="_SetRaceNameView" model="Model" />
+
+                    <partial name="_SetAlignmentView" model="Model" />
+  
+                </div>
+
             </div>
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-4 border border-warning">
+
+        <partial name="_SetProficiencyBonusView" model="Model" />
+
+        <partial name="_SetInspirationView" model="Model" />
+
+        <partial name="_AbilityCardView" model="Model" />
+
+        <partial name="_SetPassiveWisdomView" model="Model" />
+    </div>
+
+    <div class="col-md-4 border border-danger">
+        <div class="d-lg-flex">
+            <partial name="_SetArmorClass" model="Model" />
+
+            <partial name="_SetInitiativeView" model="Model" />
+
+            <partial name="_SetSpeedView" model="Model" />
+        </div>
+
+        <div class="border border-dark rounded mx-1 p-3 w-100 mt-2">
+            <partial name="_SetHitPointsView" model="Model" />
+        </div>
+
+        <div class="border border-dark rounded mx-1 p-3 w-100 mt-2">
+            <partial name="_SetTemporaryHitPointsView" model="Model"/>
+        </div>
+
+        <div class="d-lg-flex mt-2">
+            <partial name="_SetHitDice" model="Model" />
+
+            <partial name="_SetDeathSavesView" model="Model" />
+        </div>
+    </div>
+
+    <div class="col-md-4 border border-info">
+        <div class="d-flex">
+            <button class="w-25">Action</button>
+            <button class="w-25">Equipped</button>
+            <button class="w-25 btn-outline-success">Inventory</button>
+            <button class="w-25">Spells</button>
+        </div>
+        <div>
+            <partial name="_SetInventoryView" model="Model" />
+        </div>
+    </div>  
+
+</div>
+
+
+
+
+
+
+
 
 
 
