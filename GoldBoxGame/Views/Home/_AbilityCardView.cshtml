@@ -9,38 +9,39 @@
     string bonusString = bonus >= 0 ? $"+{bonus}" : bonus.ToString();
 
     <div class="d-lg-flex border border-dark px-0 pt-2 bg-light">
-        <div class="col-sm-2 text-center border border-dark">
+        <div class="col-sm-2 text-center">
             <div class="border border-dark p-2">@score</div>
-            <div class="border border-dark p-3 m-0 h3">@bonusString</div>
+            <div class="border border-dark p-3 m-0 h3 rounded">@bonusString</div>
             <div class="border border-dark text-uppercase fw-bold" style="font-size:10px">@abilityScore.Key.ToString()</div>
         </div>
         <div class="col pl-5" style="padding-left:10px">
             <div>Saving Throws</div>
-            
 
-                @foreach (var item in Model.Skills)
+            @foreach (var item in Model.Skills)
+            {
+                var key = item.Key;
+                var skill = item.Value;
+
+                if (@abilityScore.Key == skill.Ability)
                 {
-                    var key = item.Key;
-                    var skill = item.Value;
-
-                    //string ability2 = item.Key.ToString();
-                    //int bonus2 = (item.Value - 10) / 2;
-                    //string bonusString2 = bonus2 >= 0 ? $"+{bonus2}" : bonus2.ToString();
-
-                    var test = Model.Proficiencies;
-                    int profBonus = Model.Proficiencies.Contains(key) ? profBonus = Model.ProficiencyBonus : profBonus = 0;
-
-
-
-                    if (@abilityScore.Key == skill.Ability)
+                    if (Model.Proficiencies.Contains(key))
+                    {
+                        <div class="d-flex border border-dark">
+                            <div><input class="mx-2" type="checkbox" name="name" value="" checked="checked" /></div>
+                            <div class="text-decoration-underline mx-1" style="width:35px">@skill.Modifier</div>
+                            <div class="mx-2">@skill.Type</div>
+                        </div>
+                    }
+                    else
                     {
                         <div class="d-flex border border-dark">
                             <div><input class="mx-2" type="checkbox" name="name" value="" /></div>
-                            <div class="text-decoration-underline mx-1">@skill.Modifier</div>
+                            <div class="text-decoration-underline mx-1" style="width:35px">@skill.Modifier</div>
                             <div class="mx-2">@skill.Type</div>
                         </div>
                     }
                 }
+            }
         </div>
     </div>
 }

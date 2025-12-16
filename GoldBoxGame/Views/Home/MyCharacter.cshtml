@@ -2,7 +2,7 @@
 
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 border border-warning">
         <div class="d-lg-flex border border-dark">
             <div class="border border-dark p-2">@Model.ProficiencyBonus</div>
             <div class="p-2">Proficiency Bonus</div>
@@ -14,12 +14,44 @@
 
         <partial name="_AbilityCardView" model="Model" />
 
+        <div class="d-lg-flex">
+            <div class="border border-dark py-3 px-4 fw-bold rounded">@Model.SetPassiveWisdom()</div>
+            <div class="border border-dark p-3 w-100">Passive Wisdom</div>
+        </div>
+    </div>
 
+    <div class="col-md-4 border border-danger">
+        <div class=" d-lg-flex">
+            <div class="text-center border border-dark rounded w-25 mx-3">
+                <div class="h3">15</div>
+                <div>Armor Class</div>
+            </div>
 
+            <div class="text-center border border-dark rounded w-25 mx-3">
+                <div class="h3">15</div>
+                <div>Initiative</div>
+            </div>
+
+            <div class="text-center border border-dark rounded w-25 mx-3">
+                <div class="h3">30</div>
+                <div>Speed</div>
+            </div>
+        </div>
+
+        <div class="border border-dark rounded mx-3 p-3 w-75">
+            <div>Hit Points<u style="padding-left:35px">33</u></div>
+
+        </div>
 
 
     </div>
+
 </div>
+
+
+
+
+
 
 
 
