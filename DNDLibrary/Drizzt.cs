@@ -21,6 +21,7 @@ public static class CharacterFactory
 		Character Drizzt = new Character();
 		Drizzt.Name = "Drizzt Do'Urden";
 		Drizzt.Alignment = Alignment.ChaoticGood;
+		Drizzt.Id = 1;
 
 
 		EquipmentList.GetAllWeapons();
@@ -83,5 +84,144 @@ public static class CharacterFactory
 		Drizzt.AddFeat("Athlete");
 
 		return Drizzt;
+	}
+
+	public static Character CreateBruenor()
+	{
+		Character character = new Character();
+		character.Name = "Bruenor Battlehammer";
+		character.Alignment = Alignment.ChaoticGood;
+		character.Id = 2;
+
+
+		EquipmentList.GetAllWeapons();
+
+		character.SetRace(new MountainDwarf());
+		character.SetClass(new Fighter(), 1);
+
+		character.Inventory = character.CharacterClass.StartingEquipment;
+
+		character.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Intelligence] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Wisdom] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Constitution] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Charisma] = Roll.InitialAbilityScore();
+
+		character.Race.AbilityScoreModifiers.ToList().ForEach(mod =>
+		{
+			character.AbilityScores[mod.Key] += mod.Value;
+		});
+
+
+		character.MaxHitPoints = character.CurrentHitPoints = character.CharacterClass.HitDie + character.AbilityScores[Ability.Constitution];
+		character.TemporaryHitPoints = 0;
+
+
+		character.AbilityModifier.Add(Ability.Strength, character.GetAbilityModifier(Ability.Strength));
+		character.AbilityModifier.Add(Ability.Dexterity, character.GetAbilityModifier(Ability.Dexterity));
+		character.AbilityModifier.Add(Ability.Intelligence, character.GetAbilityModifier(Ability.Intelligence));
+		character.AbilityModifier.Add(Ability.Wisdom, character.GetAbilityModifier(Ability.Wisdom));
+		character.AbilityModifier.Add(Ability.Constitution, character.GetAbilityModifier(Ability.Constitution));
+		character.AbilityModifier.Add(Ability.Charisma, character.GetAbilityModifier(Ability.Charisma));
+
+
+		character.SavingThrows.Add(Ability.Strength, character.GetSavingThrowBonus(Ability.Strength));
+		character.SavingThrows.Add(Ability.Dexterity, character.GetSavingThrowBonus(Ability.Dexterity));
+		character.SavingThrows.Add(Ability.Intelligence, character.GetSavingThrowBonus(Ability.Intelligence));
+		character.SavingThrows.Add(Ability.Wisdom, character.GetSavingThrowBonus(Ability.Wisdom));
+		character.SavingThrows.Add(Ability.Constitution, character.GetSavingThrowBonus(Ability.Constitution));
+		character.SavingThrows.Add(Ability.Charisma, character.GetSavingThrowBonus(Ability.Charisma));
+
+		foreach (var item in character.Skills)
+		{
+			Skill skill = item.Value;
+			int mod = character.AbilityModifier[skill.Ability];
+			skill.Modifier = mod;
+
+			if (character.Proficiencies.Contains(skill.Type))
+			{
+				skill.Modifier += 2;
+			}
+		}
+
+		character.ArmorClass = character.SetArmorClass();
+
+		character.SetPassiveWisdom();
+
+		character.AddFeat("Alert");
+		character.AddFeat("Athlete");
+
+		return character;
+	}
+
+
+	public static Character CreateWulfgar()
+	{
+		Character character = new Character();
+		character.Name = "Wulfgar";
+		character.Alignment = Alignment.ChaoticGood;
+		character.Id = 3;
+
+
+		EquipmentList.GetAllWeapons();
+
+		character.SetRace(new Human());
+		character.SetClass(new Barbarian(), 1);
+
+		character.Inventory = character.CharacterClass.StartingEquipment;
+
+		character.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Intelligence] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Wisdom] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Constitution] = Roll.InitialAbilityScore();
+		character.AbilityScores[Ability.Charisma] = Roll.InitialAbilityScore();
+
+		character.Race.AbilityScoreModifiers.ToList().ForEach(mod =>
+		{
+			character.AbilityScores[mod.Key] += mod.Value;
+		});
+
+
+		character.MaxHitPoints = character.CurrentHitPoints = character.CharacterClass.HitDie + character.AbilityScores[Ability.Constitution];
+		character.TemporaryHitPoints = 0;
+
+
+		character.AbilityModifier.Add(Ability.Strength, character.GetAbilityModifier(Ability.Strength));
+		character.AbilityModifier.Add(Ability.Dexterity, character.GetAbilityModifier(Ability.Dexterity));
+		character.AbilityModifier.Add(Ability.Intelligence, character.GetAbilityModifier(Ability.Intelligence));
+		character.AbilityModifier.Add(Ability.Wisdom, character.GetAbilityModifier(Ability.Wisdom));
+		character.AbilityModifier.Add(Ability.Constitution, character.GetAbilityModifier(Ability.Constitution));
+		character.AbilityModifier.Add(Ability.Charisma, character.GetAbilityModifier(Ability.Charisma));
+
+
+		character.SavingThrows.Add(Ability.Strength, character.GetSavingThrowBonus(Ability.Strength));
+		character.SavingThrows.Add(Ability.Dexterity, character.GetSavingThrowBonus(Ability.Dexterity));
+		character.SavingThrows.Add(Ability.Intelligence, character.GetSavingThrowBonus(Ability.Intelligence));
+		character.SavingThrows.Add(Ability.Wisdom, character.GetSavingThrowBonus(Ability.Wisdom));
+		character.SavingThrows.Add(Ability.Constitution, character.GetSavingThrowBonus(Ability.Constitution));
+		character.SavingThrows.Add(Ability.Charisma, character.GetSavingThrowBonus(Ability.Charisma));
+
+		foreach (var item in character.Skills)
+		{
+			Skill skill = item.Value;
+			int mod = character.AbilityModifier[skill.Ability];
+			skill.Modifier = mod;
+
+			if (character.Proficiencies.Contains(skill.Type))
+			{
+				skill.Modifier += 2;
+			}
+		}
+
+		character.ArmorClass = character.SetArmorClass();
+
+		character.SetPassiveWisdom();
+
+		character.AddFeat("Alert");
+		character.AddFeat("Athlete");
+
+		return character;
 	}
 }

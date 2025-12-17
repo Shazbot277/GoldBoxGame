@@ -26,8 +26,17 @@ namespace GoldBoxGame.Controllers
 		#region My DND Character
 	
 
-		public IActionResult MyCharacter()
+		public IActionResult MyCharacter(int? id)
 		{
+			if (id.HasValue)
+			{
+				switch (id.Value)
+				{
+					case 1: return View(DNDLibrary.CharacterFactory.CreateDrizzt());
+					case 2: return View(DNDLibrary.CharacterFactory.CreateBruenor());
+					case 3: return View(DNDLibrary.CharacterFactory.CreateWulfgar());
+				}
+			}
 			DNDLibrary.Character character = DNDLibrary.CharacterFactory.CreateDrizzt();
 			return View(character);
 		}

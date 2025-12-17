@@ -1,19 +1,37 @@
-﻿
+﻿@{
+    List<DNDLibrary.Character> characters = new List<DNDLibrary.Character>()
+    {
+        DNDLibrary.CharacterFactory.CreateWulfgar(),
+        DNDLibrary.CharacterFactory.CreateDrizzt(),
+        DNDLibrary.CharacterFactory.CreateBruenor()
+        
+        
+    };
+}
+
+
+<style>
+    body {
+    background-color:black;
+    }
+    body, div, p {
+        color:white
+    }
+    
+</style>
 
 
 
 <div class="jumbotron jumbotron-fluid">
     <section class="mainview">
-        <div class="row">
-            <div class="col-md-7 border border-dark rounded p-5 bg-light">
-                <div class="border border-5 border-dark rounded h-100">
-                    <img src="/imgs/campfire.png" class="img-fluid img w-100" />
-
-
+        <div class="row borderimg">
+            <div class="col-md-7 bg-light p-0">
+                <div class="borderimg p-0 m-0">
+                    <img src="/imgs/outpost_a.png" alt="" style="width:100%" />
                 </div>
             </div>
-            <div class="col-md-4 border border-dark rounded p-5 bg-light">
-                <div class="border border-5 border-dark rounded" style="height:500px">
+            <div class="col-md-4 bg-light mx-0">
+                <div class="borderimg">
 
                     <table class="table w-100">
                         <tr>
@@ -21,39 +39,36 @@
                             <th>AC</th>
                             <th>HP</th>
                         </tr>
-                        <tr>
-                            <td>Cattie-Brie</td>
-                            <td>16</td>
-                            <td>15/15</td>
-                        </tr>
-                        <tr>
-                            <td>Bruenor</td>
-                            <td>16</td>
-                            <td>15/15</td>
-                        </tr>
-                        <tr>
-                            <td>Wulfgar</td>
-                            <td>16</td>
-                            <td>15/15</td>
-                        </tr>
+                        @foreach (DNDLibrary.Character character in characters)
+                        {
+                            <tr>
+                                <td>@Html.ActionLink(character.Name, "MyCharacter", "Home", new { Id = character.Id }, null)</td>
+                                <td>@character.ArmorClass</td>
+                                <td>@character.CurrentHitPoints/@character.MaxHitPoints</td>
+                            </tr>
+                        }
                     </table>
                 </div>
-
             </div>
         </div>
-        <div class="row">
+        <div class="row borderimg">
             <div class="col-md-12">
-
-                <div>Bottom screen</div>
-
-
+                <p class="lead">Where do you wish to go?</p>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col-md-12 px-5">
+                <div class="d-flex">
+                    <div><button class="btn-outline-success text-uppercase h3">Inn</button></div>
+                    <div><button class="btn-outline-success text-uppercase h3">Hall</button></div>
+                    <div><button class="btn-outline-success text-uppercase h3">Commandant</button></div>
+                    <div><button class="btn-outline-success text-uppercase h3">Armor</button></div>
+                    <div><button class="btn-outline-success text-uppercase h3">Leave</button></div>
+                </div>
             </div>
         </div>
 
 
-        <div class="container">
-            <h1>Welcome to the Primary View</h1>
-            <p>This is the main content area of the Primary View.</p>
-        </div>
+
     </section>
 </div>

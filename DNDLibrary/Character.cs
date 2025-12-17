@@ -13,6 +13,7 @@ namespace DNDLibrary;
 
 public class Character
 {
+	public int Id { get; set; } = 9999;
 	public string Name { get; set; }
 	public string Background { get; set; }
 
@@ -33,7 +34,6 @@ public class Character
 	public int MaxHitPoints { get; set; } = 0;
 	public int CurrentHitPoints { get; set; } = 0;
 	public int TemporaryHitPoints { get; set; } = 0;
-
 
     public List<string> Feats { get; set; } = new();
 
@@ -161,7 +161,7 @@ public class Character
 
 	public int SetArmorClass()
 	{
-		if (Inventory.Any(x => x.Type == EquipmentType.Armor))
+		if (Inventory.Any(x => x != null && x.Type == EquipmentType.Armor))
 		{
 			var armor = Inventory.First(x => x.Type == EquipmentType.Armor);
 

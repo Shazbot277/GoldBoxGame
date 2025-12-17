@@ -2,6 +2,21 @@ html {
   font-size: 14px;
 }
 
+.borderimg {
+    border: 30px solid transparent;
+    padding: 20px;
+    border-image: url('/imgs/border3.png') 30 round;
+}
+
+.borderimg2 {
+    border:10px solid transparent;
+    padding: 15px;
+    border-top-image
+    border-image: url('/imgs/border.png') 30 round;
+}
+
+
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
