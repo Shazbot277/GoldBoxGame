@@ -4,20 +4,20 @@
         DNDLibrary.CharacterFactory.CreateWulfgar(),
         DNDLibrary.CharacterFactory.CreateDrizzt(),
         DNDLibrary.CharacterFactory.CreateBruenor()
-        
-        
+
+
     };
 }
 
 
 <style>
     body {
-    background-color:black;
+        background-color: black;
     }
+
     body, div, p {
-        color:white
+        color: white
     }
-    
 </style>
 
 
@@ -25,35 +25,20 @@
 <div class="jumbotron jumbotron-fluid">
     <section class="mainview">
         <div class="row border-all-img">
-            <div id="MAIN-SCREEN" class="col-md-5 bg-dark p-0">
+            <div id="MAIN-SCREEN" class="col-md-12 bg-dark p-0">
                 <div class="border-all-img p-0 m-0 text-center">
-                    <p class="h3">Outpost</p>
-                    <img src="/imgs/outpost_a.png" alt="" style="width:75%" />
-                </div>
-            </div>
-            <div id="CHARACTER-SCREEN" class="col-md-7 bg-dark mx-0 px-1">
-                <div class="border-all-img">
-                    <div class="row">
-                        <div class="col-sm-6">Character</div>
-                        <div class="col-sm-3">AC</div>
-                        <div class="col-sm-3">HP</div>
-                    </div>
-                    @foreach (DNDLibrary.Character character in characters)
-                    {
-                        <div class="row">
-                            <div class="col-sm-6">
-                                @Html.ActionLink(character.Name, "MyCharacter", "Home", new { Id = character.Id }, null)
-                            </div>
-                            <div class="col-sm-3">@character.ArmorClass</div>
-                            <div class="col-sm-3">@character.CurrentHitPoints/@character.MaxHitPoints</div>
-                        </div>
-                    }
+                    
+                    asdasd
+
                 </div>
             </div>
         </div>
         <div class="row border-bottom-img">
             <div class="col-md-12">
-                <p class="lead">Where do you wish to go?</p>
+                <p class="lead">
+                    asdfasdfsadf
+
+                </p>
             </div>
         </div>
         <div class="row container">

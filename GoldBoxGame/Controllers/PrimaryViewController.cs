@@ -8,5 +8,10 @@ namespace GoldBoxGame.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult Cinema()
+		{
+			return View();
+		}
 	}
 }
