@@ -190,6 +190,7 @@ public class Character
 		return 10 + GetAbilityModifier(Ability.Wisdom);
 	}
 
+	[Obsolete]
 	public static void TarlCharacter()
 	{
 		Character tarl = new Character();
@@ -223,5 +224,46 @@ public class Character
 
 		//tarl.SetRace(new Dragonborn(DraconicAncestry.DragonType.Blue));
 
+	}
+
+	public void EquipArmor(Equipment.Equipment item)
+	{
+		if (item.Type == EquipmentType.Armor && item.BodyPart == CharacterBodyPart.Body)
+		{
+			var existingArmor = Inventory.FirstOrDefault(x => x != null && x.Type == EquipmentType.Armor);
+			if (existingArmor != null)
+			{
+				existingArmor.IsEquipped = false;
+			}
+			item.IsEquipped = true;
+			ArmorClass = SetArmorClass();
+		}
+	}
+
+
+	public void EquipMainHand(Equipment.Equipment item)
+	{
+		if (item.Type == EquipmentType.Weapon)
+		{
+			var existingItem = Inventory.FirstOrDefault(x => x != null && x.BodyPart == CharacterBodyPart.MainHand);
+			if (existingItem != null)
+			{
+				existingItem.IsEquipped = false;
+			}
+			item.IsEquipped = true;
+		}
+	}
+
+	public void EquipOffHand(Equipment.Equipment item)
+	{
+		if (item.Type == EquipmentType.Weapon || item.Type == EquipmentType.Shield)
+		{
+			var existingItem = Inventory.FirstOrDefault(x => x != null && x.BodyPart == CharacterBodyPart.OffHand);
+			if (existingItem != null)
+			{
+				existingItem.IsEquipped = false;
+			}
+			item.IsEquipped = true;
+		}
 	}
 }

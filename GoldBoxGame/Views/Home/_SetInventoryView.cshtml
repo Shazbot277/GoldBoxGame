@@ -13,7 +13,7 @@
                     if (item is not null && item.Type == DNDLibrary.Equipment.EquipmentType.Armor)
                     {
                         string name = ((DNDLibrary.Equipment.Armor)item).Name;
-                        <div><label><input type="checkbox" name="name" value="" /> @name</label></div>
+                        <div><label><input type="checkbox" name="name" value="" @(item.IsEquipped ? "checked" : "") /> @name</label></div>
                     }
                 }
             
@@ -24,7 +24,7 @@
                     if (item is not null && item.Type == DNDLibrary.Equipment.EquipmentType.Weapon)
                     {
                         string name = ((DNDLibrary.Equipment.Weapon)item).Name;
-                        <div><label><input type="checkbox" name="name" value="" /> @name</label></div>
+                        <div><label><input type="checkbox" name="name" value="" @(item.IsEquipped?"checked":"") /> @name</label></div>
                     }
                 }
         }

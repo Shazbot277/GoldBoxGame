@@ -8,7 +8,7 @@ public class Armor : Equipment
 	public int MaxDexBonus { get; set; } = int.MaxValue; // unlimited unless medium armor
 
 
-	public static List<Armor> All = new List<Armor>() 
+	public static List<Armor> All = new List<Armor>()
 	{
 		new Armor() {
 			Name = "Padded Armor",
@@ -17,7 +17,8 @@ public class Armor : Equipment
 			BaseAC = 11,
 			AddDexModifier = true,
 			Weight = 8,
-			Cost = 5
+			Cost = 5,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Leather",
@@ -26,7 +27,8 @@ public class Armor : Equipment
 			BaseAC = 11,
 			AddDexModifier = true,
 			Weight = 10,
-			Cost = 10
+			Cost = 10,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Studded Leather Armor",
@@ -36,7 +38,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 13,
 			Cost = 45,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 
 		},
 		new Armor() {
@@ -47,7 +50,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 12,
 			Cost = 10,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Chain Shirt",
@@ -57,7 +61,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 20,
 			Cost = 50,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Scale Mail",
@@ -67,7 +72,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 45,
 			Cost = 50,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Breast Plate",
@@ -77,7 +83,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 20,
 			Cost = 400,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Half Plate",
@@ -87,7 +94,8 @@ public class Armor : Equipment
 			AddDexModifier = true,
 			Weight = 40,
 			Cost = 750,
-			MaxDexBonus = 2
+			MaxDexBonus = 2,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Ring Mail",
@@ -96,7 +104,8 @@ public class Armor : Equipment
 			BaseAC = 14,
 			AddDexModifier = false,
 			Weight = 40,
-			Cost = 30
+			Cost = 30,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Chain Mail",
@@ -105,7 +114,8 @@ public class Armor : Equipment
 			BaseAC = 16,
 			AddDexModifier = false,
 			Weight = 55,
-			Cost = 75
+			Cost = 75,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Splint Mail",
@@ -114,7 +124,8 @@ public class Armor : Equipment
 			BaseAC = 17,
 			AddDexModifier = false,
 			Weight = 60,
-			Cost = 200
+			Cost = 200,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Plate",
@@ -123,7 +134,8 @@ public class Armor : Equipment
 			BaseAC = 18,
 			AddDexModifier = false,
 			Weight = 65,
-			Cost = 1500
+			Cost = 1500,
+			BodyPart = CharacterBodyPart.Body
 		},
 		new Armor() {
 			Name = "Shield",
@@ -132,7 +144,8 @@ public class Armor : Equipment
 			BaseAC = 2,
 			AddDexModifier = false,
 			Weight = 6,
-			Cost = 10
+			Cost = 10,
+			BodyPart = CharacterBodyPart.OffHand
 		},
 		new Armor() {
 			Name = "Tower Shield",
@@ -141,7 +154,8 @@ public class Armor : Equipment
 			BaseAC = 3,
 			AddDexModifier = false,
 			Weight = 45,
-			Cost = 10
+			Cost = 10,
+			BodyPart = CharacterBodyPart.OffHand
 		},
 
         // Gear

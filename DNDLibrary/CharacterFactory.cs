@@ -1,18 +1,8 @@
 ﻿using DNDLibrary.Class;
 using DNDLibrary.Equipment;
 using DNDLibrary.Races;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DNDLibrary;
-
-public class Drizzt
-{
-
-}
 
 public static class CharacterFactory
 {
@@ -30,6 +20,12 @@ public static class CharacterFactory
 		Drizzt.SetClass(new Ranger(), 1);
 
 		Drizzt.Inventory = Drizzt.CharacterClass.StartingEquipment;
+
+		//Set Equipped Items
+		Drizzt.EquipArmor(EquipmentList.Get("Studded Leather Armor"));
+		Drizzt.EquipMainHand(EquipmentList.Get("Scimitar"));
+		Drizzt.EquipOffHand(EquipmentList.Get("Shortsword"));
+
 
 		Drizzt.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
 		Drizzt.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
