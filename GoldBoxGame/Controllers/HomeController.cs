@@ -6,6 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using System.Diagnostics;
 
+
+//dnd5eapi.co
+//https://www.dnd5eapi.co/api/2014/equipment/
+//https://www.dnd5eapi.co/api/2014/equipment/longswordhttps://www.dnd5eapi.co/api/2014/equipment/longsword
+//https://www.dnd5eapi.co/api/2014/equipment/spear
+
+
+
 namespace GoldBoxGame.Controllers
 {
 	public class HomeController : Controller

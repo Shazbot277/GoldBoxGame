@@ -1,0 +1,356 @@
+[
+  {
+    "name": "Club",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d4",
+    "damageType": "Bludgeoning",
+    "properties": [ "Light" ],
+    "weight": 2,
+    "cost": "1 sp"
+  },
+  {
+    "name": "Dagger",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d4",
+    "damageType": "Piercing",
+    "properties": [ "Finesse", "Light", "Thrown" ],
+    "range": "20/60",
+    "weight": 1,
+    "cost": "2 gp"
+  },
+  {
+    "name": "Greatclub",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Bludgeoning",
+    "properties": [ "Two-Handed" ],
+    "weight": 10,
+    "cost": "2 sp"
+  },
+  {
+    "name": "Handaxe",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Slashing",
+    "properties": [ "Light", "Thrown" ],
+    "range": "20/60",
+    "weight": 2,
+    "cost": "5 gp"
+  },
+  {
+    "name": "Javelin",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Thrown" ],
+    "range": "30/120",
+    "weight": 2,
+    "cost": "5 sp"
+  },
+  {
+    "name": "Light Hammer",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d4",
+    "damageType": "Bludgeoning",
+    "properties": [ "Light", "Thrown" ],
+    "range": "20/60",
+    "weight": 2,
+    "cost": "2 gp"
+  },
+  {
+    "name": "Mace",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Bludgeoning",
+    "properties": [],
+    "weight": 4,
+    "cost": "5 gp"
+  },
+  {
+    "name": "Quarterstaff",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Bludgeoning",
+    "properties": [ "Versatile" ],
+    "versatileDamage": "1d8",
+    "weight": 4,
+    "cost": "2 sp"
+  },
+  {
+    "name": "Sickle",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d4",
+    "damageType": "Slashing",
+    "properties": [ "Light" ],
+    "weight": 2,
+    "cost": "1 gp"
+  },
+  {
+    "name": "Spear",
+    "category": "Simple",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Thrown", "Versatile" ],
+    "range": "20/60",
+    "versatileDamage": "1d8",
+    "weight": 3,
+    "cost": "1 gp"
+  },
+
+  {
+    "name": "Light Crossbow",
+    "category": "Simple",
+    "type": "Ranged",
+    "damage": "1d8",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Loading", "Two-Handed" ],
+    "range": "80/320",
+    "weight": 5,
+    "cost": "25 gp"
+  },
+  {
+    "name": "Dart",
+    "category": "Simple",
+    "type": "Ranged",
+    "damage": "1d4",
+    "damageType": "Piercing",
+    "properties": [ "Finesse", "Thrown" ],
+    "range": "20/60",
+    "weight": 0.25,
+    "cost": "5 cp"
+  },
+  {
+    "name": "Shortbow",
+    "category": "Simple",
+    "type": "Ranged",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Two-Handed" ],
+    "range": "80/320",
+    "weight": 2,
+    "cost": "25 gp"
+  },
+  {
+    "name": "Sling",
+    "category": "Simple",
+    "type": "Ranged",
+    "damage": "1d4",
+    "damageType": "Bludgeoning",
+    "properties": [ "Ammunition" ],
+    "range": "30/120",
+    "weight": 0,
+    "cost": "1 sp"
+  },
+
+  {
+    "name": "Battleaxe",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Slashing",
+    "properties": [ "Versatile" ],
+    "versatileDamage": "1d10",
+    "weight": 4,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Flail",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Bludgeoning",
+    "properties": [],
+    "weight": 2,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Glaive",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d10",
+    "damageType": "Slashing",
+    "properties": [ "Heavy", "Reach", "Two-Handed" ],
+    "weight": 6,
+    "cost": "20 gp"
+  },
+  {
+    "name": "Greataxe",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d12",
+    "damageType": "Slashing",
+    "properties": [ "Heavy", "Two-Handed" ],
+    "weight": 7,
+    "cost": "30 gp"
+  },
+  {
+    "name": "Greatsword",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "2d6",
+    "damageType": "Slashing",
+    "properties": [ "Heavy", "Two-Handed" ],
+    "weight": 6,
+    "cost": "50 gp"
+  },
+  {
+    "name": "Halberd",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d10",
+    "damageType": "Slashing",
+    "properties": [ "Heavy", "Reach", "Two-Handed" ],
+    "weight": 6,
+    "cost": "20 gp"
+  },
+  {
+    "name": "Lance",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d12",
+    "damageType": "Piercing",
+    "properties": [ "Reach", "Special" ],
+    "weight": 6,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Longsword",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Slashing",
+    "properties": [ "Versatile" ],
+    "versatileDamage": "1d10",
+    "weight": 3,
+    "cost": "15 gp"
+  },
+  {
+    "name": "Maul",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "2d6",
+    "damageType": "Bludgeoning",
+    "properties": [ "Heavy", "Two-Handed" ],
+    "weight": 10,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Rapier",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Piercing",
+    "properties": [ "Finesse" ],
+    "weight": 2,
+    "cost": "25 gp"
+  },
+  {
+    "name": "Scimitar",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Slashing",
+    "properties": [ "Finesse", "Light" ],
+    "weight": 3,
+    "cost": "25 gp"
+  },
+  {
+    "name": "Shortsword",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Finesse", "Light" ],
+    "weight": 2,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Trident",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Thrown", "Versatile" ],
+    "range": "20/60",
+    "versatileDamage": "1d8",
+    "weight": 4,
+    "cost": "5 gp"
+  },
+  {
+    "name": "Warhammer",
+    "category": "Martial",
+    "type": "Melee",
+    "damage": "1d8",
+    "damageType": "Bludgeoning",
+    "properties": [ "Versatile" ],
+    "versatileDamage": "1d10",
+    "weight": 2,
+    "cost": "15 gp"
+  },
+
+  {
+    "name": "Blowgun",
+    "category": "Martial",
+    "type": "Ranged",
+    "damage": "1",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Loading" ],
+    "range": "25/100",
+    "weight": 1,
+    "cost": "10 gp"
+  },
+  {
+    "name": "Hand Crossbow",
+    "category": "Martial",
+    "type": "Ranged",
+    "damage": "1d6",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Light", "Loading" ],
+    "range": "30/120",
+    "weight": 3,
+    "cost": "75 gp"
+  },
+  {
+    "name": "Heavy Crossbow",
+    "category": "Martial",
+    "type": "Ranged",
+    "damage": "1d10",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Heavy", "Loading", "Two-Handed" ],
+    "range": "100/400",
+    "weight": 18,
+    "cost": "50 gp"
+  },
+  {
+    "name": "Longbow",
+    "category": "Martial",
+    "type": "Ranged",
+    "damage": "1d8",
+    "damageType": "Piercing",
+    "properties": [ "Ammunition", "Heavy", "Two-Handed" ],
+    "range": "150/600",
+    "weight": 2,
+    "cost": "50 gp"
+  },
+  {
+    "name": "Net",
+    "category": "Martial",
+    "type": "Ranged",
+    "damage": "0",
+    "damageType": "None",
+    "properties": [ "Thrown", "Special" ],
+    "range": "5/15",
+    "weight": 3,
+    "cost": "1 gp"
+  }
+]

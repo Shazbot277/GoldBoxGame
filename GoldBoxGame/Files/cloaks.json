@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Cloak of Protection",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "armorClassBonus": 1,
+    "savingThrowBonus": 1,
+    "effects": [
+      "+1 bonus to AC",
+      "+1 bonus to all saving throws"
+    ]
+  },
+  {
+    "name": "Cloak of Elvenkind",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Advantage on Dexterity (Stealth) checks",
+      "Disadvantage on Wisdom (Perception) checks to spot wearer"
+    ]
+  },
+  {
+    "name": "Cloak of Displacement",
+    "rarity": "Very Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "Attack rolls against you have disadvantage",
+      "Effect ends until next turn if you take damage"
+    ]
+  },
+  {
+    "name": "Cloak of the Bat",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "Advantage on Dexterity (Stealth) checks",
+      "Can fly in dim light or darkness",
+      "Can polymorph into a bat"
+    ]
+  },
+  {
+    "name": "Cloak of Arachnida",
+    "rarity": "Very Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "Climb difficult surfaces including ceilings",
+      "Ignore movement restrictions from webs",
+      "Resistance to poison damage",
+      "Can cast Web"
+    ]
+  },
+  {
+    "name": "Cloak of the Manta Ray",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Swim speed of 60 feet",
+      "Can breathe underwater"
+    ]
+  },
+  {
+    "name": "Cloak of Many Fashions",
+    "rarity": "Common",
+    "requiresAttunement": false,
+    "effects": [
+      "Can change appearance of the cloak at will"
+    ]
+  },
+  {
+    "name": "Cloak of Billowing",
+    "rarity": "Common",
+    "requiresAttunement": false,
+    "effects": [
+      "Can billow dramatically as a bonus action"
+    ]
+  },
+  {
+    "name": "Cloak of Useful Items",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Contains patches that can be removed to create useful items"
+    ]
+  },
+  {
+    "name": "Cloak of Invisibility",
+    "rarity": "Legendary",
+    "requiresAttunement": true,
+    "effects": [
+      "Grants invisibility for up to 2 hours per day"
+    ]
+  }
+]

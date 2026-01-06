@@ -19,12 +19,15 @@ public static class Weapons
         // SIMPLE MELEE
         // -------------------------
         new Weapon {
-		Name="Club", Type=EquipmentType.Weapon,
+		Name="Club", 
+		Type=EquipmentType.Weapon,
 		Category=WeaponCategory.Simple,
 		DamageType=WeaponDamageType.Bludgeoning,
-		DiceCount=1, DiceSides=4,
+		DiceCount=1, 
+		DiceSides=4,
 		Properties={ WeaponProperty.Light },
-		Weight=2, Cost=1
+		Weight=2, 
+		Cost=1
 	},
 
 		new Weapon {

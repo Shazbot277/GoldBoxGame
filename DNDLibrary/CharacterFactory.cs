@@ -97,6 +97,10 @@ public static class CharacterFactory
 
 		character.Inventory = character.CharacterClass.StartingEquipment;
 
+		character.EquipArmor(EquipmentList.Get("Chain Mail"));
+		character.EquipMainHand(EquipmentList.Get("Lightsword"));
+		character.EquipOffHand(EquipmentList.Get("Shield"));
+
 		character.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
 		character.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();
 		character.AbilityScores[Ability.Intelligence] = Roll.InitialAbilityScore();
@@ -166,6 +170,8 @@ public static class CharacterFactory
 		character.SetClass(new Barbarian(), 1);
 
 		character.Inventory = character.CharacterClass.StartingEquipment;
+
+		character.EquipMainHand(EquipmentList.Get("Great Axe"));
 
 		character.AbilityScores[Ability.Strength] = Roll.InitialAbilityScore();
 		character.AbilityScores[Ability.Dexterity] = Roll.InitialAbilityScore();

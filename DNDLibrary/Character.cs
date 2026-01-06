@@ -228,7 +228,7 @@ public class Character
 
 	public void EquipArmor(Equipment.Equipment item)
 	{
-		if (item.Type == EquipmentType.Armor && item.BodyPart == CharacterBodyPart.Body)
+		if (item != null && item.Type == EquipmentType.Armor && item.BodyPart == CharacterBodyPart.Body)
 		{
 			var existingArmor = Inventory.FirstOrDefault(x => x != null && x.Type == EquipmentType.Armor);
 			if (existingArmor != null)
@@ -243,7 +243,7 @@ public class Character
 
 	public void EquipMainHand(Equipment.Equipment item)
 	{
-		if (item.Type == EquipmentType.Weapon)
+		if (item != null && item.Type == EquipmentType.Weapon)
 		{
 			var existingItem = Inventory.FirstOrDefault(x => x != null && x.BodyPart == CharacterBodyPart.MainHand);
 			if (existingItem != null)
@@ -256,7 +256,7 @@ public class Character
 
 	public void EquipOffHand(Equipment.Equipment item)
 	{
-		if (item.Type == EquipmentType.Weapon || item.Type == EquipmentType.Shield)
+		if (item != null && item.Type == EquipmentType.Weapon || item.Type == EquipmentType.Shield)
 		{
 			var existingItem = Inventory.FirstOrDefault(x => x != null && x.BodyPart == CharacterBodyPart.OffHand);
 			if (existingItem != null)
