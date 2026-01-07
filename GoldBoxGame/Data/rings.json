@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Ring of Protection",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "armorClassBonus": 1,
+    "savingThrowBonus": 1,
+    "effects": [
+      "+1 bonus to AC",
+      "+1 bonus to all saving throws"
+    ]
+  },
+  {
+    "name": "Ring of Spell Storing",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "charges": {
+      "maxSpellLevels": 5
+    },
+    "effects": [
+      "Store up to 5 levels of spells",
+      "Cast stored spells without using spell slots"
+    ]
+  },
+  {
+    "name": "Ring of Invisibility",
+    "slot": "Ring",
+    "rarity": "Legendary",
+    "requiresAttunement": true,
+    "charges": {
+      "max": 2,
+      "durationPerCharge": "1 hour"
+    },
+    "effects": [
+      "Become invisible for up to 1 hour per charge"
+    ]
+  },
+  {
+    "name": "Ring of Evasion",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "On a successful Dexterity save, take no damage instead of half"
+    ]
+  },
+  {
+    "name": "Ring of Resistance",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "chooseDamageType": true,
+    "effects": [
+      "Gain resistance to one damage type"
+    ]
+  },
+  {
+    "name": "Ring of Free Action",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "Unaffected by difficult terrain",
+      "Magic cannot reduce your speed or paralyze you"
+    ]
+  },
+  {
+    "name": "Ring of Water Walking",
+    "slot": "Ring",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Can walk on liquid surfaces"
+    ]
+  },
+  {
+    "name": "Ring of Swimming",
+    "slot": "Ring",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Swim speed of 40 feet"
+    ]
+  },
+  {
+    "name": "Ring of Jumping",
+    "slot": "Ring",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Cast Jump at will"
+    ]
+  },
+  {
+    "name": "Ring of Mind Shielding",
+    "slot": "Ring",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Immune to mind-reading magic",
+      "Thoughts cannot be detected",
+      "Soul can inhabit the ring after death"
+    ]
+  },
+  {
+    "name": "Ring of Warmth",
+    "slot": "Ring",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Resistance to cold damage",
+      "Ignore extreme cold environments"
+    ]
+  },
+  {
+    "name": "Ring of Feather Falling",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": false,
+    "effects": [
+      "Automatically cast Feather Fall when falling"
+    ]
+  },
+  {
+    "name": "Ring of Animal Influence",
+    "slot": "Ring",
+    "rarity": "Rare",
+    "requiresAttunement": false,
+    "charges": {
+      "max": 3,
+      "recharge": "Daily"
+    },
+    "effects": [
+      "Cast Animal Friendship, Fear, or Speak with Animals"
+    ]
+  }
+]

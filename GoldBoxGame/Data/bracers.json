@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Bracers of Defense",
+    "slot": "Arms",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "armorClassBonus": 2,
+    "conditions": [
+      "Not wearing armor",
+      "Not using a shield"
+    ],
+    "effects": [
+      "+2 bonus to AC while not wearing armor or using a shield"
+    ]
+  },
+  {
+    "name": "Bracers of Archery",
+    "slot": "Arms",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Proficiency with longbows and shortbows",
+      "+2 bonus to damage rolls with bows"
+    ]
+  },
+  {
+    "name": "Bracers of Flying Daggers",
+    "slot": "Arms",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "charges": {
+      "max": 2,
+      "recharge": "Daily"
+    },
+    "effects": [
+      "Create and throw magical daggers that deal force damage"
+    ]
+  },
+  {
+    "name": "Bracers of Illusion",
+    "slot": "Arms",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Cast Minor Illusion as a bonus action"
+    ]
+  }
+]

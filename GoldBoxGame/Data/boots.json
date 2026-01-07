@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Boots of Elvenkind",
+    "slot": "Feet",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Your steps make no sound",
+      "Advantage on Dexterity (Stealth) checks relying on sound"
+    ]
+  },
+  {
+    "name": "Boots of Striding and Springing",
+    "slot": "Feet",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Walking speed becomes 30 feet if lower",
+      "Jump distance is tripled"
+    ]
+  },
+  {
+    "name": "Boots of Speed",
+    "slot": "Feet",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "activation": "Bonus Action",
+    "effects": [
+      "Double walking speed",
+      "Advantage on Dexterity saving throws",
+      "Opportunity attacks against you have disadvantage"
+    ]
+  },
+  {
+    "name": "Boots of the Winterlands",
+    "slot": "Feet",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Resistance to cold damage",
+      "Ignore difficult terrain from ice and snow",
+      "Can tolerate extreme cold"
+    ]
+  },
+  {
+    "name": "Boots of Levitation",
+    "slot": "Feet",
+    "rarity": "Rare",
+    "requiresAttunement": false,
+    "effects": [
+      "Can cast Levitate on yourself at will"
+    ]
+  },
+  {
+    "name": "Boots of Flying",
+    "slot": "Feet",
+    "rarity": "Very Rare",
+    "requiresAttunement": true,
+    "charges": {
+      "max": 4,
+      "durationPerCharge": "1 hour"
+    },
+    "effects": [
+      "Gain a flying speed equal to walking speed"
+    ]
+  },
+  {
+    "name": "Boots of False Tracks",
+    "slot": "Feet",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Leave false tracks of another humanoid race"
+    ]
+  }
+]

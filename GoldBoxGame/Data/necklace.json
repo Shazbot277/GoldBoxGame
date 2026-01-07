@@ -1,0 +1,112 @@
+﻿[
+  {
+    "name": "Amulet of Health",
+    "slot": "Neck",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "abilityScoreSet": {
+      "ability": "Constitution",
+      "value": 19
+    },
+    "effects": [
+      "Sets Constitution score to 19"
+    ]
+  },
+  {
+    "name": "Amulet of Proof against Detection and Location",
+    "slot": "Neck",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Immune to divination magic",
+      "Cannot be detected by magical scrying sensors"
+    ]
+  },
+  {
+    "name": "Amulet of the Planes",
+    "slot": "Neck",
+    "rarity": "Very Rare",
+    "requiresAttunement": true,
+    "charges": {
+      "max": 3,
+      "recharge": "Daily"
+    },
+    "effects": [
+      "Cast Plane Shift (chance of mishap)"
+    ]
+  },
+  {
+    "name": "Amulet of the Drunkard",
+    "slot": "Neck",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Regain 4d4 + 4 hit points when drinking alcohol as a bonus action"
+    ]
+  },
+  {
+    "name": "Necklace of Adaptation",
+    "slot": "Neck",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Breathe normally in any environment",
+      "Immune to harmful gases and vapors"
+    ]
+  },
+  {
+    "name": "Necklace of Fireballs",
+    "slot": "Neck",
+    "rarity": "Rare",
+    "requiresAttunement": false,
+    "charges": {
+      "beads": [
+        {
+          "spellLevel": 3,
+          "count": 2
+        },
+        {
+          "spellLevel": 4,
+          "count": 2
+        },
+        {
+          "spellLevel": 5,
+          "count": 1
+        }
+      ]
+    },
+    "effects": [
+      "Detach a bead to cast Fireball"
+    ]
+  },
+  {
+    "name": "Periapt of Health",
+    "slot": "Neck",
+    "rarity": "Uncommon",
+    "requiresAttunement": false,
+    "effects": [
+      "Immune to disease",
+      "Stabilize automatically when at 0 hit points"
+    ]
+  },
+  {
+    "name": "Periapt of Proof against Poison",
+    "slot": "Neck",
+    "rarity": "Rare",
+    "requiresAttunement": true,
+    "effects": [
+      "Immunity to poison damage",
+      "Immune to poisoned condition"
+    ]
+  },
+  {
+    "name": "Periapt of Wound Closure",
+    "slot": "Neck",
+    "rarity": "Uncommon",
+    "requiresAttunement": true,
+    "effects": [
+      "Stabilize automatically at 0 hit points",
+      "Double hit points regained from Hit Dice"
+    ]
+  }
+]
